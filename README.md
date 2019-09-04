@@ -1,7 +1,7 @@
 Sublime Text KSQL Syntax Definition
 ===================================
 
-A Sublime Text syntax-highlighting plugin for Confluent's [KSQL](https://www.confluent.io/product/ksql)
+A Sublime Text 3 syntax-highlighting plugin for Confluent's [KSQL](https://www.confluent.io/product/ksql)
 
 ### Installation
 
@@ -18,3 +18,8 @@ Using Package Control will ensure that the package automatically stays up-to-dat
 Open a file containing some KSQL commands and change the syntax to `SQL (KSQL)`.
 
 For files with a `.ksql` extension, this syntax should be selected automatically.
+
+
+### Example
+
+![screenshot](screenshot.png)
