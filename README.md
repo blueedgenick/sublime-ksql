@@ -1,9 +1,9 @@
 Sublime Text KSQL Syntax Definition
 ===================================
 
-A Sublime Text 3 syntax-highlighting plugin for Confluent's [KSQL](https://www.confluent.io/product/ksql) [ksqlDB](https://ksqldb.io/)
+A Sublime Text 3 syntax-highlighting plugin for Confluent's [KSQL](https://www.confluent.io/product/ksql) and [ksqlDB](https://ksqldb.io/)
 
-Tested to work with Confluent Platform ("CP") 5.3+ and ksqlDB 0.6+
+Tested to work with Confluent Platform 5.3+ and ksqlDB 0.6+
 
 ### Installation
 
