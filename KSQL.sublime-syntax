@@ -47,12 +47,12 @@ contexts:
       scope: constant.boolean.sql
     - match: (?i:\b(select(\s+(distinct|top))?|set|where|window(\s+(tumbling|hopping|session))?|group\sby|or|like|between|and|with|case|when|then|else|end|having|limit|(inner|left|outer)\s+join|join)|partition\sby\b)
       scope: keyword.other.DML.sql
-    - match: (?i:\b(show|list)(\s+(functions|queries|streams|tables|topics))?\b)
+    - match: (?i:\b(show|list)(\s+(connectors|functions|properties|queries|streams|tables|topics|types))?\b)
       scope: meta.show.sql
       captures:
         1: keyword.other.create.sql
         2: keyword.other.table.sql
-    - match: (?i:\b(on|((is\s+)?not\s+)?null)\b)
+    - match: (?i:\b(on|spool|terminate|((is\s+)?not\s+)?null)\b)
       scope: keyword.other.DDL.create.II.sql
     - match: (?i:\bvalues\b)
       scope: keyword.other.DML.II.sql
@@ -66,13 +66,13 @@ contexts:
       scope: keyword.operator.math.sql
     - match: \|\|
       scope: keyword.operator.concatenator.sql
-    - match: (?i)\b(ARRAYCONTAINS|DATETOSTRING|ELT|FIELD|GEO_DISTANCE|IFNULL|RANDOM|STRINGTODATE|STRINGTOTIMESTAMP|TIMESTAMPTOSTRING)\b
+    - match: (?i)\b(ARRAYCONTAINS|AS_ARRAY|AS_MAP|DATETOSTRING|ELT|EXPLODE|FIELD|IFNULL|SLICE|STRINGTODATE|STRINGTOTIMESTAMP|TIMESTAMPTOSTRING)\b
       scope: support.function.scalar.sql
-    - match: (?i)\b(COLLECT_LIST|COLLECT_SET|COUNT|HISTOGRAM|MAX|MIN|SUM|TOPK|TOPKDISTINCT|WINDOWSTART|WINDOWEND)(?=\s*\()
+    - match: (?i)\b(AVG|COLLECT_LIST|COLLECT_SET|COUNT|HISTOGRAM|MAX|MIN|SUM|TOPK|TOPKDISTINCT|WINDOWSTART|WINDOWEND)(?=\s*\()
       scope: support.function.aggregate.sql
-    - match: (?i)\b(ABS|CEIL|FLOOR|ROUND)(?=\s*\()
+    - match: (?i)\b(ABS|CEIL|EXP|FLOOR|GENERATE_SERIES|GEO_DISTANCE|LN|RANDOM|ROUND|SQRT)(?=\s*\()
       scope: support.function.math.sql
-    - match: (?i)\b(CAST|CONCAT|EXTRACTJSONFIELD|LCASE|LEN|MASK|MASK_KEEP_LEFT|MASK_KEEP_RIGHT|MASK_LEFT|MASK_RIGHT|SPLIT|SUBSTRING|TRIM|UCASE|URL_DECODE_PARAM|URL_ENCODE_PARAM|URL_EXTRACT_FRAGMENT|URL_EXTRACT_HOST_URL_EXTRACT_PARAMETER|URL_EXTRACT_PATH_URL_EXTRACT_PORT_URL_EXTRACT_PROTOCOL_URL_EXTRACT_QUERY)\b
+    - match: (?i)\b(CAST|CONCAT|EXTRACTJSONFIELD|INITCAP|LCASE|LEN|MASK|MASK_KEEP_LEFT|MASK_KEEP_RIGHT|MASK_LEFT|MASK_RIGHT|REPLACE|SPLIT|SUBSTRING|TRIM|UCASE|URL_DECODE_PARAM|URL_ENCODE_PARAM|URL_EXTRACT_FRAGMENT|URL_EXTRACT_HOST_URL_EXTRACT_PARAMETER|URL_EXTRACT_PATH_URL_EXTRACT_PORT_URL_EXTRACT_PROTOCOL_URL_EXTRACT_QUERY)\b
       scope: support.function.string.sql
     - match: (?i)\b(from|insert\s+into)\s+(\w+)\b
       captures:
